@@ -18,10 +18,10 @@ def login(Id):
     time.sleep(1)#waits 1 sec
     web.maximize_window()#maximizes the chrome window
     username=web.find_element_by_xpath('/html/body/div[2]/div/form/div[6]/input[1]')#locates username field
-    username.send_keys("12009486")#enters username in username field
+    username.send_keys("Your registration number here")#enters registration number in username field
     time.sleep(1)#waits 1 sec
     password=web.find_element_by_xpath('/html/body/div[2]/div/form/div[6]/input[2]')#locates password field
-    password.send_keys("@#YDesto545*$#%")#enters password in password field
+    password.send_keys("Your password here")#enters password in password field
     time.sleep(1)#waits 1 sec
     login=web.find_element_by_xpath("/html/body/div[2]/div/form/div[7]/button")#locates login button
     login.click()#clicks login button
@@ -105,7 +105,7 @@ TUE  = {"1":"9:00:00","2":"12:00:00","3":"13:00:00","4":"15:00:00","5":"16:00:00
 WED  = {"1":"3:00:00"}
 THUR = {"1":"9:15:00","2":"12:00:00","3":"13:00:00","4":"15:00:00","5":"16:00:00"}
 FRI  = {"1":"9:00:00","2":"12:00:00","3":"13:00:00","4":"15:00:00"}
-SAT  = {"1":"13:10:30","2":"15:00:00"}
+SAT  = {"1":"12:00:00","2":"15:00:00"}
 #Time Table entered as dictionary-------------------------------------------------
 week_day=calendar.day_name[datetime_now.weekday()]#gets the weekday name
 #Assigns the corresponding dictionary according to current weekday
