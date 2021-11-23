@@ -12,26 +12,28 @@ webhook = Webhook.from_url("https://discord.com/api/webhooks/910720477427798026/
 #webhook link of a discord channel
 datetime_now=datetime.now()
 #gets the date and time of current day
+username_input=input("Enter Your Registration Number: ")
+password_input=input("Enter Your Password           : ")
 def login(Id):
     web=webdriver.Chrome()#chrome webdriver
     web.get("https://myclass.lpu.in")#opens myclass website
     time.sleep(1)#waits 1 sec
     web.maximize_window()#maximizes the chrome window
-    username=web.find_element_by_xpath('/html/body/div[2]/div/form/div[6]/input[1]')#locates username field
-    username.send_keys("Your registration number here")#enters registration number in username field
+    username=web.find_element(By.XPATH,"/html/body/div[2]/div/form/div[6]/input[1]")#locates username field
+    username.send_keys(username_input)#enters registration number in username field
     time.sleep(1)#waits 1 sec
-    password=web.find_element_by_xpath('/html/body/div[2]/div/form/div[6]/input[2]')#locates password field
-    password.send_keys("Your password here")#enters password in password field
+    password=web.find_element(By.XPATH,"/html/body/div[2]/div/form/div[6]/input[2]")#locates password field
+    password.send_keys(password_input)#enters password in password field
     time.sleep(1)#waits 1 sec
-    login=web.find_element_by_xpath("/html/body/div[2]/div/form/div[7]/button")#locates login button
+    login=web.find_element(By.XPATH,"/html/body/div[2]/div/form/div[7]/button")#locates login button
     login.click()#clicks login button
     webhook.send("Login Success :)")#sends "login Success :)" notification to discord channel
     time.sleep(1)#waits 1 sec
-    View_classes=web.find_element_by_xpath("/html/body/div[9]/div/div[1]/div/div/div[1]/div/div[2]/a")
+    View_classes=web.find_element(By.XPATH,"/html/body/div[9]/div/div[1]/div/div/div[1]/div/div[2]/a")
     #locates view_classes container
     View_classes.click()#Clicks View Classees Button
     time.sleep(1)#waits 1 sec
-    class_elements=web.find_element_by_xpath("/html/body/div[1]/div[6]/div[3]/div[2]/div/div[2]/div/table/tbody/tr/td/div/div/div[3]/table/tbody/tr/td[2]/div/div[2]/a[{}]".format(Id))
+    class_elements=web.find_element(By.XPATH,"/html/body/div[1]/div[6]/div[3]/div[2]/div/div[2]/div/table/tbody/tr/td/div/div/div[3]/table/tbody/tr/td[2]/div/div[2]/a[{}]".format(Id))
     #Locates the class container respectively according to time
     class_elements.click()#clicks that class container
     time.sleep(1)#waits 1 sec
@@ -45,7 +47,7 @@ def login(Id):
         #sends "Joining class failed :(" notification to discord channel
     try:
         time.sleep(5)#waits 5 sec
-        web.switch_to.frame(web.find_element_by_id("frame"))#finds the frame by id and switch to it
+        web.switch_to.frame(web.find_element(By.ID,"frame"))#finds the frame by id and switch to it
         listen_only_button=WebDriverWait(web,150).until(EC.presence_of_element_located((By.XPATH,'/html/body/div[2]/div/div/div[1]/div/div/span/button[2]/span[1]/i')))
         #waits for 150 sec until the listen_only button appears
         listen_only_button.click()#clicks listen_only button once it appears
@@ -84,6 +86,8 @@ def login(Id):
     time.sleep(5)#waits 5 sec
 total_time_now=datetime_now.strftime("%H")#gets the hour value from current time
 if total_time_now>"17":#checks if the current time hour value is greater 17
+    print("Classes done for today : )")
+    webhook.send("Classes done for today : )")
     quit()#if it is true then exits the program
 def join(WEEK):
     sched=BlockingScheduler()#BlockingScheduler
@@ -103,7 +107,7 @@ def join(WEEK):
 MON  = {"1":"9:00:00","2":"10:00:00","3":"12:00:00","4":"13:00:00","5":"15:00:00"}
 TUE  = {"1":"9:00:00","2":"12:00:00","3":"13:00:00","4":"15:00:00","5":"16:00:00"}
 WED  = {"1":"3:00:00"}
-THUR = {"1":"9:15:00","2":"12:00:00","3":"13:00:00","4":"15:00:00","5":"16:00:00"}
+THUR = {"1":"9:00:00","2":"12:00:00","3":"13:00:00","4":"15:00:00","5":"16:00:00"}
 FRI  = {"1":"9:00:00","2":"12:00:00","3":"13:00:00","4":"15:00:00"}
 SAT  = {"1":"12:00:00","2":"15:00:00"}
 #Time Table entered as dictionary-------------------------------------------------
