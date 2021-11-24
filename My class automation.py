@@ -7,8 +7,8 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from apscheduler.schedulers.blocking import BlockingScheduler
-from discord import Webhook,RequestsWebhookAdapter
-webhook = Webhook.from_url("https://discord.com/api/webhooks/910720477427798026/3KAIFgmjpKP5tWp9QZyOSNF2J5OQQu0-JpIIcbvatiRevLqXQQ5wu4-y3si6l4Z_I71u", adapter=RequestsWebhookAdapter())
+from dhooks import Webhook
+webhook = Webhook("https://discord.com/api/webhooks/910720477427798026/3KAIFgmjpKP5tWp9QZyOSNF2J5OQQu0-JpIIcbvatiRevLqXQQ5wu4-y3si6l4Z_I71u")
 #webhook link of a discord channel
 datetime_now=datetime.now()
 #gets the date and time of current day

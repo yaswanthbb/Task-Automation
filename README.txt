@@ -8,6 +8,5 @@ Procedure for installing necessary packages:
 3.Type these commands and install one after the another:
 •	pip install selenium
 •	pip install apscheduler
-•	pip install requests
-•	pip install discord-webhook
+•	pip install dhooks
 Once u have completed the whole procedure, restart your editor, then you should be good to go….
