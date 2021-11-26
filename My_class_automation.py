@@ -78,10 +78,6 @@ user_password_entry_area = Entry(test_root,textvariable=var2).place(x=710,y=100)
 submit_button = Button(text="Submit",font=('Franklin Gothic Medium', 14, 'bold'),fg="red", bg="orange",command= get_value).place(x=750,y=135)
 
 def automation():
-    webhook = Webhook("https://discord.com/api/webhooks/910720477427798026/3KAIFgmjpKP5tWp9QZyOSNF2J5OQQu0-JpIIcbvatiRevLqXQQ5wu4-y3si6l4Z_I71u")
-    # webhook link of a discord channel
-    datetime_now = datetime.now()
-    # gets the date and time of current day
     username_input = x
     password_input = y
 
