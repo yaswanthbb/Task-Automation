@@ -198,7 +198,8 @@ def automation():
     elif week_day == "Tuesday":
         join(TUE)
     elif week_day == "Wednesday":
-        join(WED)
+        print("Enjoy Your Wednesday No classes Today")
+        webhook.send("Enjoy Your Wednesday No classes Today")
     elif week_day == "Thursday":
         join(THUR)
     elif week_day == "Friday":
@@ -206,5 +207,6 @@ def automation():
     elif week_day == "Saturday":
         join(SAT)
     else:
-        print("Enjoy Your Sunday")
+        print("Enjoy Your Sunday No classes Today")
+        webhook.send("Enjoy Your Sunday No classes Today")
 test_root.mainloop()
