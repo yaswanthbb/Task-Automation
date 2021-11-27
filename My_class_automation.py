@@ -74,7 +74,7 @@ def get_value():
 user_name = Label(text="Registration Number :",font=('Avenir Next Condensed', 10, 'bold'),bg="#af8b66").place(x=560,y=60)
 user_password = Label(text="Password :",font=('Avenir Next Condensed', 10, 'bold'),bg="#af8b66").place(x=560,y=100)
 user_name_input_area = Entry(test_root,textvariable=var1).place(x=710,y=60)
-user_password_entry_area = Entry(test_root,textvariable=var2).place(x=710,y=100)
+user_password_entry_area = Entry(test_root,textvariable=var2,show="*").place(x=710,y=100)
 submit_button = Button(text="Submit",font=('Franklin Gothic Medium', 14, 'bold'),fg="red", bg="orange",command= get_value).place(x=750,y=135)
 
 def automation():
@@ -189,7 +189,7 @@ def automation():
     WED  = {}
     THUR = {"1":"9:00:00","2":"12:00:00","3":"13:00:00","4":"15:00:00","5":"16:00:00"}
     FRI  = {"1":"9:00:00","2":"12:00:00","3":"13:00:00","4":"15:00:00"}
-    SAT  = {"1":"12:00:00","2":"15:00:00"}
+    SAT  = {"1":"10:00:00","2":"12:00:00","3":"15:00:00"}
     # Time Table entered as dictionary-------------------------------------------------
     week_day = calendar.day_name[datetime_now.weekday()]  # gets the weekday name
     # Assigns the corresponding dictionary according to current weekday
