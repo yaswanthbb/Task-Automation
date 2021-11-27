@@ -12,7 +12,6 @@ def installing():
     pip.main(['install',package3])
     pip.main(['install',package4])
 
-
 def check():
     try:
         import selenium
