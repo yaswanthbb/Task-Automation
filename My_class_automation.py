@@ -86,7 +86,7 @@ def automation():
         web.get("https://myclass.lpu.in")  # opens myclass website
         time.sleep(1)  # waits 1 sec
         web.maximize_window()  # maximizes the chrome window
-        username = web.find_element(By.XPATH, "/html/body/div[2]/div/form/div[6]/input[1]")  # locates username field
+        username = web.find_element(By.XPATH, "/html/body/div[2]/div/form/div[6]/input[1]")  # locates username field.
         username.send_keys(username_input)  # enters registration number in username field
         time.sleep(1)  # waits 1 sec
         password = web.find_element(By.XPATH, "/html/body/div[2]/div/form/div[6]/input[2]")  # locates password field
