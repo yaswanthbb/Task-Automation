@@ -94,7 +94,7 @@ def automation():
         time.sleep(1)  # waits 1 sec
         login = web.find_element(By.XPATH, "/html/body/div[2]/div/form/div[7]/button")  # locates login button
         login.click()  # clicks login button
-        webhook.send("Login Success :)")  # sends "login Success :)" notification to discord channel
+        webhook.send("Login Success :)")  # sends "login Success :)" notification to discord channel.
         time.sleep(1)  # waits 1 sec
         View_classes = web.find_element(By.XPATH, "/html/body/div[9]/div/div[1]/div/div/div[1]/div/div[2]/a")
         # locates view_classes container
