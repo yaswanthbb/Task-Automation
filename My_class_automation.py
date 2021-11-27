@@ -125,7 +125,7 @@ def automation():
         # chatbox-------------------------------------------------------------------------------------------------------
         time_now = datetime_now.strftime("%H:%M:%S")  # gets current time in hours,minutes,seconds format
         if time_now >= "12:00:00":  # checks if the current time is greater or equal to 12:00:00
-            chat = ("Good Afternoon")  # if true then "Good Afternoon" value is given to chat variable
+            chat = ("Good Afternoon")  # if true then "Good Afternoon" value is given to chat variable.
         else:
             chat = ("Good Morning")  # if false then "Good Morning" value is given to chat variable
         try:
