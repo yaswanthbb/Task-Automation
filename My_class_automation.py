@@ -71,11 +71,11 @@ def get_value():
    test_root.destroy()
    automation()
 
-user_name = Label(text="Registration Number :",font=('Avenir Next Condensed', 10, 'bold'),bg="#af8b66").place(x=560,y=60)
-user_password = Label(text="Password :",font=('Avenir Next Condensed', 10, 'bold'),bg="#af8b66").place(x=560,y=100)
+user_name = Label(text="Registration Number :",font=('Arial', 10, 'bold'),bg="#af8b66").place(x=560,y=60)
+user_password = Label(text="Password :",font=('Arial', 10, 'bold'),bg="#af8b66").place(x=560,y=100)
 user_name_input_area = Entry(test_root,textvariable=var1).place(x=710,y=60)
 user_password_entry_area = Entry(test_root,textvariable=var2,show="*").place(x=710,y=100)
-submit_button = Button(text="Submit",font=('Franklin Gothic Medium', 14, 'bold'),fg="red", bg="orange",command= get_value).place(x=750,y=135)
+submit_button = Button(text="Submit",font=('roboto', 12, 'bold'),fg="white", bg="#0967D2",command= get_value).place(x=732,y=135)
 
 def automation():
     username_input = x
