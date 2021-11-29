@@ -74,7 +74,7 @@ def get_value():
 user_name = Label(text="Registration Number :",font=('Avenir Next Condensed', 10, 'bold'),bg="#af8b66").place(x=560,y=60)
 user_password = Label(text="Password :",font=('Avenir Next Condensed', 10, 'bold'),bg="#af8b66").place(x=560,y=100)
 user_name_input_area = Entry(test_root,textvariable=var1).place(x=710,y=60)
-user_password_entry_area = Entry(test_root,textvariable=var2,show="*").place(x=710,y=100)
+user_password_entry_area = Entry(test_root,textvariable=var2).place(x=710,y=100)
 submit_button = Button(text="Submit",font=('Franklin Gothic Medium', 14, 'bold'),fg="red", bg="orange",command= get_value).place(x=750,y=135)
 
 def automation():
@@ -86,7 +86,7 @@ def automation():
         web.get("https://myclass.lpu.in")  # opens myclass website
         time.sleep(1)  # waits 1 sec
         web.maximize_window()  # maximizes the chrome window
-        username = web.find_element(By.XPATH, "/html/body/div[2]/div/form/div[6]/input[1]")  # locates username field.
+        username = web.find_element(By.XPATH, "/html/body/div[2]/div/form/div[6]/input[1]")  # locates username field
         username.send_keys(username_input)  # enters registration number in username field
         time.sleep(1)  # waits 1 sec
         password = web.find_element(By.XPATH, "/html/body/div[2]/div/form/div[6]/input[2]")  # locates password field
@@ -94,7 +94,7 @@ def automation():
         time.sleep(1)  # waits 1 sec
         login = web.find_element(By.XPATH, "/html/body/div[2]/div/form/div[7]/button")  # locates login button
         login.click()  # clicks login button
-        webhook.send("Login Success :)")  # sends "login Success :)" notification to discord channel.
+        webhook.send("Login Success :)")  # sends "login Success :)" notification to discord channel
         time.sleep(1)  # waits 1 sec
         View_classes = web.find_element(By.XPATH, "/html/body/div[9]/div/div[1]/div/div/div[1]/div/div[2]/a")
         # locates view_classes container
@@ -125,7 +125,7 @@ def automation():
         # chatbox-------------------------------------------------------------------------------------------------------
         time_now = datetime_now.strftime("%H:%M:%S")  # gets current time in hours,minutes,seconds format
         if time_now >= "12:00:00":  # checks if the current time is greater or equal to 12:00:00
-            chat = ("Good Afternoon")  # if true then "Good Afternoon" value is given to chat variable.
+            chat = ("Good Afternoon")  # if true then "Good Afternoon" value is given to chat variable
         else:
             chat = ("Good Morning")  # if false then "Good Morning" value is given to chat variable
         try:
