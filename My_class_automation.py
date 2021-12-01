@@ -74,7 +74,7 @@ def get_value():
 user_name = Label(text="Registration Number :",font=('roboto', 10, 'bold'),bg="#af8b66").place(x=560,y=60)
 user_password = Label(text="Password :",font=('roboto', 10, 'bold'),bg="#af8b66").place(x=560,y=100)
 user_name_input_area = Entry(test_root,textvariable=var1).place(x=710,y=60)
-user_password_entry_area = Entry(test_root,textvariable=var2).place(x=710,y=100)
+user_password_entry_area = Entry(test_root,textvariable=var2,show="*").place(x=710,y=100)
 submit_button = Button(text="Submit",font=('roboto', 12, 'bold'),fg="white", bg="#3488EF",command= get_value).place(x=720,y=135)
 
 def automation():
