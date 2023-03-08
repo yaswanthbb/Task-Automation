@@ -58,7 +58,7 @@ btn_2= Button(test_root, text="---> Click Here To Install All Necessary Componen
             command=check_system,font=myFont,fg="white", bg="#3488EF")
 btn_2.place(x=37, y=30)
 check_instruction_1=Label(text="Only One Time Required",font=('roboto', 12, 'bold'),bg="#a58460").place(x=40, y=70)
-writtenby=Label(text="Written By Yaswanth and Ashish",font=('roboto',12,'bold')).place(x=20, y=350)
+writtenby=Label(text="Written By Yaswanth",font=('roboto',12,'bold')).place(x=20, y=350)
 
 var1= StringVar()
 var2=StringVar()
